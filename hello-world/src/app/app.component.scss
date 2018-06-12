@@ -1,0 +1,99 @@
+$theme: royalblue;
+$phone: 550px;
+
+.logomark{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    span{
+        color: $theme;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+
+.intro-wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    .intro-content{
+        margin: 0px 80px;
+
+        @media (max-width: $phone){
+            margin: 0px 20px;
+        }
+
+        h1{
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        h2{
+            font-size: 38px;
+            margin-bottom: 0px;
+            font-weight: 500;
+            @media (max-width: $phone){
+                font-size: 28px;
+            }
+        }
+
+        h3{
+            margin-top: 0;
+            font-size: 38px;
+            font-weight: 300;
+            @media (max-width: $phone){
+                font-size: 28px;
+            }
+        }
+
+       .button-holder{
+            margin-top: 40px;
+            .button{
+                padding: 8px 12px;
+                border: 0px;
+                border-radius: 3px;
+                font-weight: 500;
+                font-size: 12px;
+                text-transform: uppercase;
+                display: inline-block;
+
+                @media (max-width: $phone){
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+
+                text-decoration: none !important;
+                transition: all 0.3s ease;
+
+                &:first-of-type{
+                    background-color: $theme;
+                    color: white;
+
+                    margin-right: 20px;
+
+                    &:hover{
+                        background-color: rgba($theme, 0.9);
+                        box-shadow: 0px 0px 10px rgba($theme, 0.4);
+                    }
+                }
+
+                &:last-of-type{
+                    background-color: #eee;
+                    color: $theme;
+
+                    &:hover{
+                        
+                        box-shadow: 0px 0px 10px rgba(silver, 0.4);
+                    }
+                }
+            }
+       }
+    }
+}
